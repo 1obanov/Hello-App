@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hello App</title>
+  <link rel="shortcut icon" href="img/logo.png" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Main core CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Reset core CSS -->
+  <link rel="stylesheet" href="vendors/reset.css">
+  <!-- Font-Awesome core CSS -->
+  <link rel="stylesheet" href="vendors/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="vendors/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<body>
+  <div class="layout">
+    <!-- Start of Navigation -->
+    <nav class="navigation">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item active">
+          <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#chats" role="tab" aria-controls="pills-home"
+            aria-selected="true"><i class="fa fa-comments" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#contacts" role="tab"
+            aria-controls="pills-profile" aria-selected="false"><i class="fa fa-users" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#calendar" role="tab"
+            aria-controls="pills-profile" aria-selected="false"><i class="fa fa-calendar" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#notification" role="tab"
+            aria-controls="pills-profile" aria-selected="false"><i class="fa fa-bell" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#settings" role="tab"
+            aria-controls="pills-profile" aria-selected="false"><i class="fa fa-cog" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- End of Navigation -->
+    <!-- Start of Sidebar -->
+    <div class="sidebar">
+      <div class="container">
+        <div class="tab-content">
+          <!-- Start of Chats -->
+          <div class="tab-pane fade active in" id="chats" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="top">
+              <form>
+                <input type="search" class="top__search" placeholder="Search">
+                <button type="submit" class="top__btn">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+              <ul class="nav nav-tabs">
+                <li class="active">
+                  <a href="#direct" data-toggle="tab">Direct</a>
+                </li>
+                <li>
+                  <a href="#groups" data-toggle="tab">Groups</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content">
+              <div class="discuss">
+                <div class="discuss__title">
+                  Discussions
+                </div>
+                <button type="button" class="discuss__btn" data-toggle="modal" data-target="#compose">
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </button>
+                <!-- Start of Modal Add Chat -->
+                <div class="modal fade" id="compose" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5>Compose</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <ul class="nav nav-tabs">
+                          <li class="active">
+                            <a href="#details" data-toggle="tab">Details</a>
+                          </li>
+                          <li>
+                            <a href="#participants" data-toggle="tab">Participants</a>
+                          </li>
+                        </ul>
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="details">
+                            <form class="details">
+                              <div class="details__form">
+                                <label>Title</label>
+                                <input type="text" placeholder="What's the topic?">
+                              </div>
+                              <div class="details__form">
+                                <label>Message</label>
+                                <textarea placeholder="What's up?"></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="participants tab-pane" id="participants">
+                            <div class="search">
+                              <form>
+                                <input type="search" class="search__input" placeholder="Search">
+                                <button type="submit" class="search__btn">
+                                  <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                              </form>
+                            </div>
+                            <div class="participants__title">
+                              Users
+                            </div>
+                            <ul class="participants__users">
+                              <li class="participants__list">
+                                <div class="participants__img">
+                                  <img src="img/avatar.jpg" alt="">
+                                </div>
+                                <div class="participants__contents">
+                                  <h5>Steave Ride</h5>
+                                  <span>Chicago, USA</span>
+                                </div>
+                                <div class="participants__checkbox">
+                                  <label class="custom-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="participants__list">
+                                <div class="participants__img">
+                                  <img src="img/avatar2.jpg" alt="">
+                                </div>
+                                <div class="participants__contents">
+                                  <h5>Chris Brown</h5>
+                                  <span>Los Angeles, USA</span>
+                                </div>
+                                <div class="participants__checkbox">
+                                  <label class="custom-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="participants__list">
+                                <div class="participants__img">
+                                  <img src="img/avatar3.jpg" alt="">
+                                </div>
+                                <div class="participants__contents">
+                                  <h5>David Rice</h5>
+                                  <span>Cape May, USA</span>
+                                </div>
+                                <div class="participants__checkbox">
+                                  <label class="custom-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="participants__list">
+                                <div class="participants__img">
+                                  <img src="img/avatar4.jpg" alt="">
+                                </div>
+                                <div class="participants__contents">
+                                  <h5>Mark Bruce</h5>
+                                  <span>Las Vegas, USA</span>
+                                </div>
+                                <div class="participants__checkbox">
+                                  <label class="custom-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="participants__list">
+                                <div class="participants__img">
+                                  <img src="img/avatar5.jpg" alt="">
+                                </div>
+                                <div class="participants__contents">
+                                  <h5>John Smith</h5>
+                                  <span>Chicago, USA</span>
+                                </div>
+                                <div class="participants__checkbox">
+                                  <label class="custom-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="participants__list">
+                                <div class="participants__img">
+                                  <img src="img/avatar.jpg" alt="">
+                                </div>
+                                <div class="participants__contents">
+                                  <h5>Steave Ride</h5>
+                                  <span>Chicago, USA</span>
+                                </div>
+                                <div class="participants__checkbox">
+                                  <label class="custom-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="participants__list">
+                                <div class="participants__img">
+                                  <img src="img/avatar2.jpg" alt="">
+                                </div>
+                                <div class="participants__contents">
+                                  <h5>Chris Brown</h5>
+                                  <span>Los Angeles, USA</span>
+                                </div>
+                                <div class="participants__checkbox">
+                                  <label class="custom-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="participants__list">
+                                <div class="participants__img">
+                                  <img src="img/avatar3.jpg" alt="">
+                                </div>
+                                <div class="participants__contents">
+                                  <h5>David Rice</h5>
+                                  <span>Cape May, USA</span>
+                                </div>
+                                <div class="participants__checkbox">
+                                  <label class="custom-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="participants__list">
+                                <div class="participants__img">
+                                  <img src="img/avatar4.jpg" alt="">
+                                </div>
+                                <div class="participants__contents">
+                                  <h5>Mark Bruce</h5>
+                                  <span>Las Vegas, USA</span>
+                                </div>
+                                <div class="participants__checkbox">
+                                  <label class="custom-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="participants__list">
+                                <div class="participants__img">
+                                  <img src="img/avatar5.jpg" alt="">
+                                </div>
+                                <div class="participants__contents">
+                                  <h5>John Smith</h5>
+                                  <span>Chicago, USA</span>
+                                </div>
+                                <div class="participants__checkbox">
+                                  <label class="custom-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" class="button">Compose</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Modal Add Chat -->
+              </div>
+              <!-- Start of Direct Chats -->
+              <div class="tab-pane active" id="direct" aria-labelledby="chat-direct">
+                <div class="middle">
+                  <div class="nav discussions" role="tablist">
+                    <a href="#chat1" class="active" data-chat="open" data-toggle="tab" role="tab">
+                      <div class="discussions__status discussions__status_online">
+                        <img src="img/avatar.jpg" alt="">
+                      </div>
+                      <div class="discussions__content">
+                        <div class="discussions__content-heading">
+                          <h5>Steave Ride</h5>
+                          <span>Today</span>
+                        </div>
+                        <div class="discussions__content-text">
+                          Lorem Ipsum is simply dummy text of the printing.
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#chat1" class="active" data-chat="open" data-toggle="tab" role="tab">
+                      <div class="discussions__status discussions__status_offline">
+                        <img src="img/avatar2.jpg" alt="">
+                      </div>
+                      <div class="discussions__content">
+                        <div class="discussions__content-heading">
+                          <h5>Chris Brown</h5>
+                          <span>Yesterday</span>
+                        </div>
+                        <div class="discussions__content-text">
+                          Lorem Ipsum is simply dummy text of the printing.
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#chat1" class="active" data-chat="open" data-toggle="tab" role="tab">
+                      <div class="discussions__status discussions__status_online">
+                        <img src="img/avatar3.jpg" alt="">
+                      </div>
+                      <div class="discussions__content">
+                        <div class="discussions__content-heading">
+                          <h5>David Rice</h5>
+                          <span>Jan 23</span>
+                        </div>
+                        <div class="discussions__content-text">
+                          Lorem Ipsum is simply dummy text of the printing.
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#chat1" class="active" data-chat="open" data-toggle="tab" role="tab">
+                      <div class="discussions__status discussions__status_offline">
+                        <img src="img/avatar4.jpg" alt="">
+                      </div>
+                      <div class="discussions__content">
+                        <div class="discussions__content-heading">
+                          <h5>Mark Bruce</h5>
+                          <span>Feb 23</span>
+                        </div>
+                        <div class="discussions__content-text">
+                          Lorem Ipsum is simply dummy text of the printing.
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#chat1" class="active" data-chat="open" data-toggle="tab" role="tab">
+                      <div class="discussions__status discussions__status_online">
+                        <img src="img/avatar5.jpg" alt="">
+                      </div>
+                      <div class="discussions__content">
+                        <div class="discussions__content-heading">
+                          <h5>John Smith</h5>
+                          <span>May 12</span>
+                        </div>
+                        <div class="discussions__content-text">
+                          Lorem Ipsum is simply dummy text of the printing.
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Direct Chats -->
+              <!-- Start of Groups Chats -->
+              <div class="tab-pane" id="groups" aria-labelledby="chat-groups">
+                <div class="middle">
+                  <div class="nav groups" role="tablist">
+                    <a href="#chat2" class="active" data-chat="open" data-toggle="tab" role="tab">
+                      <div class="groups__content">
+                        <div class="groups__img">
+                          <img src="img/icon-group-1.png" alt="">
+                        </div>
+                        <div class="groups__content-heading">
+                          <h5>Football Team</h5>
+                        </div>
+                        <div class="groups__content-time">
+                          <span>Oct 10</span>
+                        </div>
+                      </div>
+                      <div class="groups__content-text">
+                        Lorem Ipsum is simply dummy text of the printing.
+                      </div>
+                    </a>
+                    <a href="#chat2" class="active" data-chat="open" data-toggle="tab" role="tab">
+                      <div class="groups__content">
+                        <div class="groups__img">
+                          <img src="img/icon-group-2.png" alt="">
+                        </div>
+                        <div class="groups__content-heading">
+                          <h5>Programming</h5>
+                        </div>
+                        <div class="groups__content-time">
+                          <span>Dec 23</span>
+                        </div>
+                      </div>
+                      <div class="groups__content-text">
+                        Lorem Ipsum is simply dummy text of the printing.
+                      </div>
+                    </a>
+                    <a href="#chat2" class="active" data-chat="open" data-toggle="tab" role="tab">
+                      <div class="groups__content">
+                        <div class="groups__img">
+                          <img src="img/icon-group-3.png" alt="">
+                        </div>
+                        <div class="groups__content-heading">
+                          <h5>Family</h5>
+                        </div>
+                        <div class="groups__content-time">
+                          <span>Sep 17</span>
+                        </div>
+                      </div>
+                      <div class="groups__content-text">
+                        Lorem Ipsum is simply dummy text of the printing.
+                      </div>
+                    </a>
+                    <a href="#chat2" class="active" data-chat="open" data-toggle="tab" role="tab">
+                      <div class="groups__content">
+                        <div class="groups__img">
+                          <img src="img/icon-group-4.png" alt="">
+                        </div>
+                        <div class="groups__content-heading">
+                          <h5>University Group</h5>
+                        </div>
+                        <div class="groups__content-time">
+                          <span>Nov 11</span>
+                        </div>
+                      </div>
+                      <div class="groups__content-text">
+                        Lorem Ipsum is simply dummy text of the printing.
+                      </div>
+                    </a>
+                    <a href="#chat2" class="active" data-chat="open" data-toggle="tab" role="tab">
+                      <div class="groups__content">
+                        <div class="groups__img">
+                          <img src="img/icon-group-5.png" alt="">
+                        </div>
+                        <div class="groups__content-heading">
+                          <h5>Amsterdam Trip</h5>
+                        </div>
+                        <div class="groups__content-time">
+                          <span>Jun 10</span>
+                        </div>
+                      </div>
+                      <div class="groups__content-text">
+                        Lorem Ipsum is simply dummy text of the printing.
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Groups Chats -->
+            </div>
+          </div>
+          <!-- End of Chats -->
+          <!-- Start of Contacts -->
+          <div class="tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="top">
+              <form>
+                <input type="search" class="top__search" placeholder="Search">
+                <button type="submit" class="top__btn">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+            <div class="contacts">
+              <div class="contacts__title">
+                Friends
+              </div>
+              <ul class="contacts__list">
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>Steave Ride</h5>
+                      <span>Ukraine, Odessa</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar2.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>Chris Brown</h5>
+                      <span>Cape May, NJ</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar3.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>David Rice</h5>
+                      <span>Poland, Cracow</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar4.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>Mark Bruce</h5>
+                      <span>New York, NY</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar5.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>John Smith</h5>
+                      <span>Holland, Amsterdam</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>Agneszka Mazur</h5>
+                      <span>Poland, Warsaw</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar2.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>Vlad Gladkij</h5>
+                      <span>Ukraine, Kiev</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar3.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>Steave Ride</h5>
+                      <span>Ukraine, Odessa</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>Steave Ride</h5>
+                      <span>Ukraine, Odessa</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar2.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>Chris Brown</h5>
+                      <span>Cape May, NJ</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar3.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>David Rice</h5>
+                      <span>Poland, Cracow</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar4.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>Mark Bruce</h5>
+                      <span>New York, NY</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-chat="open-contact" data-toggle="tab" role="tab">
+                    <img class="contacts__img" src="img/avatar5.jpg" alt="">
+                    <div class="contacts__content">
+                      <h5>John Smith</h5>
+                      <span>Holland, Amsterdam</span>
+                    </div>
+                    <div class="contacts__icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End of Contact -->
+          <!-- Start of Contact Info -->
+          <div class="contact">
+            <div class="tab-content">
+              <div class="tab-pane fade active" id="contact" role="tabpanel" aria-labelledby="chat-groups">
+                <div class="contact__content">
+                  <div class="container">
+                    <div class="contact__top">
+                      <div class="contact__top-heading">
+                        <button type="button" class="contact-back" data-chat="open-contact">
+                          <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </button>
+                        <div class="contact__top-content">
+                          <h5>John Smith</h5>
+                          <span>+48 881 520 408</span>
+                        </div>
+                        <button type="button" class="contact-call" data-toggle="modal" data-target="#call">
+                          <i class="fa fa-phone" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="contact__info">
+                      <ul class="contact__info-list">
+                        <li class="contact__info-item">
+                          <a href="#">
+                            <div class="contact__info-icon">
+                              <i class="fa fa-commenting" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact__info-text">
+                              Send message
+                            </div>
+                          </a>
+                        </li>
+                        <li class="contact__info-item">
+                          <a href="#">
+                            <div class="contact__info-icon">
+                              <i class="fa fa-share" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact__info-text">
+                              Share contact
+                            </div>
+                          </a>
+                        </li>
+                        <li class="contact__info-item">
+                          <a href="#">
+                            <div class="contact__info-icon">
+                              <i class="fa fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact__info-text">
+                              Add to favorites
+                            </div>
+                          </a>
+                        </li>
+                        <li class="contact__info-item">
+                          <a href="#">
+                            <div class="contact__info-icon">
+                              <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact__info-text">
+                              Edit contact
+                            </div>
+                          </a>
+                        </li>
+                        <li class="contact__info-item">
+                          <a href="#">
+                            <div class="contact__info-icon">
+                              <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact__info-text">
+                              Delete contact
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of Contact Info -->
+          <!-- Start of Calendar -->
+          <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="top">
+              <form>
+                <input type="search" class="top__search" placeholder="Search">
+                <button type="submit" class="top__btn">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+            <div class="calendar">
+              <div class="calendar__title">
+                Calendar
+              </div>
+              <div class="calendar__content">
+                <div class="calendar-wrapper">
+                  <button id="btnPrev" type="button">
+                    PREV
+                  </button>
+                  <button id="btnNext" type="button">
+                    NEXT
+                  </button>
+                  <div id="divCal"></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- End of Calendar -->
+          <!-- Start of Notification -->
+          <div class="tab-pane fade" id="notification" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="top">
+              <form>
+                <input type="search" class="top__search" placeholder="Search">
+                <button type="submit" class="top__btn">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+            <div class="notification">
+              <div class="notification__title">
+                Notification
+              </div>
+              <ul class="notification__list">
+                <li>
+                  <div class="notification__icon">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  </div>
+                  <div class="notification__text">
+                    Kira Plastinina has joined to <strong>Family</strong> group.
+                  </div>
+                </li>
+                <li>
+                  <div class="notification__icon">
+                    <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                  </div>
+                  <div class="notification__text">
+                    For your security reasons you need change your password.
+                  </div>
+                </li>
+                <li>
+                  <div class="notification__icon">
+                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                  </div>
+                  <div class="notification__text">
+                    Steave attached the file <strong>slider-plugin.js.</strong>
+                  </div>
+                </li>
+                <li>
+                  <div class="notification__icon">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                  </div>
+                  <div class="notification__text">
+                    David has a birthday today. Wish him all the best.
+                  </div>
+                </li>
+                <li>
+                  <div class="notification__icon">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  </div>
+                  <div class="notification__text">
+                    Mark has accepted your friend request.
+                  </div>
+                </li>
+                <li>
+                  <div class="notification__icon">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  </div>
+                  <div class="notification__text">
+                    Kira Plastinina has joined to <strong>Family</strong> group.
+                  </div>
+                </li>
+                <li>
+                  <div class="notification__icon">
+                    <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                  </div>
+                  <div class="notification__text">
+                    For your security reasons you need change your password.
+                  </div>
+                </li>
+                <li>
+                  <div class="notification__icon">
+                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                  </div>
+                  <div class="notification__text">
+                    Steave attached the file <strong>slider-plugin.js.</strong>
+                  </div>
+                </li>
+                <li>
+                  <div class="notification__icon">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                  </div>
+                  <div class="notification__text">
+                    David has a birthday today. Wish him all the best.
+                  </div>
+                </li>
+                <li>
+                  <div class="notification__icon">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  </div>
+                  <div class="notification__text">
+                    Mark has accepted your friend request.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End of Notification -->
+          <!-- Start of Settings -->
+          <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="top">
+              <div class="profile">
+                <div class="profile__img">
+                  <img src="img/avatar5.jpg" alt="">
+                </div>
+                <div class="profile__content">
+                  <div class="profile__name">John Smith</div>
+                  <span class="profile__city">Holland, Amsterdam</span>
+                </div>
+              </div>
+            </div>
+            <div class="settings">
+              <div class="settings__title">
+                Settings
+              </div>
+            </div>
+            <ul class="preferences">
+              <!-- Start of My Account -->
+              <li class="preferences__item">
+                <a href="#" data-toggle="collapse" data-target="#account" aria-expanded="true" aria-controls="account">
+                  <div class="preferences__content">
+                    <div class="preferences__content-title">
+                      My Account
+                    </div>
+                    <div class="preferences__content-text">
+                      Update your profile details
+                    </div>
+                  </div>
+                  <div class="preferences__btn">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <div id="account" class="collapse">
+                  <div class="inside">
+                    <form class="account">
+                      <div class="account__item name">
+                        <label>First Name</label>
+                        <input type="text" placeholder="First name" value="John">
+                      </div>
+                      <div class="account__item surname">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Last name" value="Smith">
+                      </div>
+                      <div class="account__item email">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter your email address" value="johgsmith@gmail.com">
+                      </div>
+                      <div class="account__item password">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter your password" value="0000000">
+                      </div>
+                      <div class="account__item name">
+                        <label>About Yourself</label>
+                        <textarea placeholder="About Yourself" value="I'm funny person!"></textarea>
+                      </div>
+                      <div class="account__item button">
+                        <button type="submit">Save Settings</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+              <!-- End of My Account -->
+              <!-- Start of Language -->
+              <li class="preferences__item">
+                <a href="#" data-toggle="collapse" data-target="#language" aria-expanded="true" aria-controls="privacy">
+                  <div class="preferences__content">
+                    <div class="preferences__content-title">
+                      Language
+                    </div>
+                    <div class="preferences__content-text">
+                      Select preferred language
+                    </div>
+                  </div>
+                  <div class="preferences__btn">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <div id="language" class="collapse">
+                  <div class="inside">
+                    <div class="language">
+                      <select class="language__select" required="">
+                        <option value="">Select an language...</option>
+                        <option>Polish, PL</option>
+                        <option>English, US</option>
+                        <option>Ukranian, UKR</option>
+                        <option>Russian, Ru</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- End of Language -->
+              <!-- Start of Notifications -->
+              <li class="preferences__item">
+                <a href="#" data-toggle="collapse" data-target="#alerts" aria-expanded="true" aria-controls="alerts">
+                  <div class="preferences__content">
+                    <div class="preferences__content-title">
+                      Notifications
+                    </div>
+                    <div class="preferences__content-text">
+                      Turn notifications on or off
+                    </div>
+                  </div>
+                  <div class="preferences__btn">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <div id="alerts" class="collapse">
+                  <div class="inside">
+                    <ul class="alerts">
+                      <li class="alerts__item">
+                        <div class="alerts__headings">
+                          <div class="alerts__title">
+                            Lights
+                          </div>
+                          <div class="alerts__switch">
+                            <label class="switch">
+                              <input type="checkbox" checked="">
+                              <span class="slider round"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="alerts__text">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                      </li>
+                      <li class="alerts__item">
+                        <div class="alerts__headings">
+                          <div class="alerts__title">
+                            Vibrate
+                          </div>
+                          <div class="alerts__switch">
+                            <label class="switch">
+                              <input type="checkbox" checked="">
+                              <span class="slider round"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="alerts__text">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                      </li>
+                      <li class="alerts__item">
+                        <div class="alerts__headings">
+                          <div class="alerts__title">
+                            Sound
+                          </div>
+                          <div class="alerts__switch">
+                            <label class="switch">
+                              <input type="checkbox" checked="">
+                              <span class="slider round"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="alerts__text">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                      </li>
+                      <li class="alerts__item">
+                        <div class="alerts__headings">
+                          <div class="alerts__title">
+                            Pop-up
+                          </div>
+                          <div class="alerts__switch">
+                            <label class="switch">
+                              <input type="checkbox" checked="">
+                              <span class="slider round"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="alerts__text">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- End of Notifications -->
+              <!-- Start of Integrations -->
+              <li class="preferences__item">
+                <a href="#" data-toggle="collapse" data-target="#integrations" aria-expanded="true"
+                  aria-controls="integrations">
+                  <div class="preferences__content">
+                    <div class="preferences__content-title">
+                      Integrations
+                    </div>
+                    <div class="preferences__content-text">
+                      Sync your social accounts
+                    </div>
+                  </div>
+                  <div class="preferences__btn">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <div id="integrations" class="collapse">
+                  <div class="inside">
+                    <ul class="integrations">
+                      <li class="integrations__item">
+                        <div class="integrations__icon facebook">
+                          <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="integrations__content">
+                          <h5>Facebook</h5>
+                          <span>Read, write, edit</span>
+                        </div>
+                        <div class="integrations__switch">
+                          <label class="switch">
+                            <input type="checkbox" checked="">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="integrations__item">
+                        <div class="integrations__icon google">
+                          <i class="fa fa-google" aria-hidden="true"></i>
+                        </div>
+                        <div class="integrations__content">
+                          <h5>Google</h5>
+                          <span>Read, write, edit</span>
+                        </div>
+                        <div class="integrations__switch">
+                          <label class="switch">
+                            <input type="checkbox" checked="">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="integrations__item">
+                        <div class="integrations__icon instagram">
+                          <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+                        <div class="integrations__content">
+                          <h5>Instagram</h5>
+                          <span>Read, write, edit</span>
+                        </div>
+                        <div class="integrations__switch">
+                          <label class="switch">
+                            <input type="checkbox" checked="">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="integrations__item">
+                        <div class="integrations__icon twitter">
+                          <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                        <div class="integrations__content">
+                          <h5>Twitter</h5>
+                          <span>Read, write, edit</span>
+                        </div>
+                        <div class="integrations__switch">
+                          <label class="switch">
+                            <input type="checkbox" checked="">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- End of Integrations -->
+              <!-- Start of Privacy -->
+              <li class="preferences__item">
+                <a href="#" data-toggle="collapse" data-target="#privacy" aria-expanded="true" aria-controls="privacy">
+                  <div class="preferences__content">
+                    <div class="preferences__content-title">
+                      Privacy & Safety
+                    </div>
+                    <div class="preferences__content-text">
+                      Control your privacy settings
+                    </div>
+                  </div>
+                  <div class="preferences__btn">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </a>
+                <div id="privacy" class="collapse">
+                  <div class="inside">
+                    <ul class="privacy">
+                      <li class="privacy__item">
+                        <div class="privacy__headings">
+                          <div class="privacy__title">
+                            Keep Me Safe
+                          </div>
+                          <div class="privacy__switch">
+                            <label class="switch">
+                              <input type="checkbox" checked="">
+                              <span class="slider round"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="privacy__text">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                      </li>
+                      <li class="privacy__item">
+                        <div class="privacy__headings">
+                          <div class="privacy__title">
+                            History
+                          </div>
+                          <div class="privacy__switch">
+                            <label class="switch">
+                              <input type="checkbox" checked="">
+                              <span class="slider round"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="privacy__text">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                      </li>
+                      <li class="privacy__item">
+                        <div class="privacy__headings">
+                          <div class="privacy__title">
+                            Everyone can add me
+                          </div>
+                          <div class="privacy__switch">
+                            <label class="switch">
+                              <input type="checkbox" checked="">
+                              <span class="slider round"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="privacy__text">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                      </li>
+                      <li class="privacy__item">
+                        <div class="privacy__headings">
+                          <div class="privacy__title">
+                            Camera
+                          </div>
+                          <div class="privacy__switch">
+                            <label class="switch">
+                              <input type="checkbox" checked="">
+                              <span class="slider round"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="privacy__text">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- End of Privacy -->
+              <!-- Start of Power Off -->
+              <li class="preferences__item">
+                <a href="sign-in.html" data-toggle="collapse" data-target="#log-out" aria-expanded="true"
+                  aria-controls="log-out">
+                  <div class="preferences__content">
+                    <div class="preferences__content-title">
+                      Power Off
+                    </div>
+                    <div class="preferences__content-text">
+                      Log out of your account
+                    </div>
+                  </div>
+                  <div class="preferences__btn">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </a>
+              </li>
+              <!-- End of Power Off -->
+          </div>
+          <!-- End of Settings -->
+        </div>
+      </div>
+    </div>
+    <!-- End of Sidebar -->
+  </div>
+
+
+  <!-- Start of Chat -->
+  <div class="chat">
+    <div class="tab-content">
+      <!-- Start of Chat Room for Direct -->
+      <div class="tab-pane fade active" id="chat1" role="tabpanel" aria-labelledby="chat-direct">
+        <div class="chat__content">
+          <div class="container">
+            <div class="chat__top">
+              <div class="chat__top-heading">
+                <img src="img/avatar.jpg" alt="">
+                <div class="chat__top-content">
+                  <h5>Steave Ride</h5>
+                  <span>Away</span>
+                </div>
+                <div class="chat__top-buttons">
+                  <button type="button" class="chat__top-arrow" data-chat="open">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </button>
+                  <div class="dropdown">
+                    <button class="chat__top-ellipsis" type="button" id="dropdownMenuDirect" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuDirect">
+                      <a class="dropdown-item" data-toggle="modal" data-target="#call">
+                        <i class="fa fa-video-camera" aria-hidden="true"></i>
+                        <p>Video call</p>
+                      </a>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#call">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <p>Voice call</p>
+                      </a>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#compose">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <p>Add people</p>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <p>Information</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat__middle">
+              <ul>
+                <li class="chat__middle-item chat__middle-item_first">
+                  <img src="img/avatar.jpg" alt="">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message chat__middle-message_friend">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div>
+                    <span class="chat__middle-time">
+                      08:56am
+                    </span>
+                  </div>
+                </li>
+                <li class="chat__middle-item chat__middle-item_second">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message chat__middle-message_me">
+                      Hello world!
+                    </div>
+                    <span class="chat__middle-time">
+                      09:43am
+                    </span>
+                  </div>
+                </li>
+                <li class="chat__middle-item chat__middle-item_first">
+                  <img src="img/avatar.jpg" alt="">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message chat__middle-message_friend">
+                      <div class="chat__middle-attachment">
+                        <a href="attachment/awesome.min.js">
+                          <i class="fa fa-paperclip" aria-hidden="true"></i></a>
+                        <div class="chat__middle-attachment-meta">
+                          <a href="attachment/awesome.min.js">
+                            <p>awesome.min.js</p>
+                          </a>
+                          <span>7kb</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="chat__middle-time">
+                      11:33am
+                    </span>
+                  </div>
+                </li>
+                <li class="chat__middle-item chat__middle-item_second">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message chat__middle-message_me">
+                      The app allows you to select which streaming services you’re a part of, then pick a genre or two
+                      of TV shows or movies that you might be into.
+                    </div>
+                    <span class="chat__middle-time">
+                      13:33pm
+                    </span>
+                  </div>
+                </li>
+                <li class="chat__middle-item chat__middle-item_first">
+                  <img src="img/avatar.jpg" alt="">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message chat__middle-message_friend">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply
+                      dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the
+                      printing and typesetting industry.Lorem Ipsum is simply.
+                    </div>
+                    <span class="chat__middle-time">
+                      17:23pm
+                    </span>
+                  </div>
+                </li>
+                <li class="chat__middle-item chat__middle-item_second">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message chat__middle-message_me">
+                      The app allows you to select which streaming services you’re a part of, then pick a genre.
+                    </div>
+                    <span class="chat__middle-time">
+                      13:33pm
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="chat__bottom">
+              <form>
+                <textarea class="chat__bottom-input" placeholder="Type message..." rows="1"></textarea>
+                <button type="submit" class="chat__bottom-btn">
+                  <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of Chat Room for Direct -->
+      <!-- Start of Chat Room for Groups -->
+      <div class="tab-pane fade active" id="chat2" role="tabpanel" aria-labelledby="chat-groups">
+        <div class="chat__content">
+          <div class="container">
+            <div class="chat__top">
+              <div class="chat__top-heading">
+                <img src="img/icon-group-1.png" alt="">
+                <div class="chat__top-content">
+                  <h5>Football Team</h5>
+                  <span>Group</span>
+                </div>
+                <div class="chat__top-buttons">
+                  <button type="button" class="chat__top-arrow" data-chat="open">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </button>
+                  <div class="dropdown">
+                    <button class="chat__top-ellipsis" type="button" id="dropdownMenuGroup" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuGroup">
+                      <a class="dropdown-item">
+                        <i class="fa fa-history" aria-hidden="true"></i>
+                        <p>Clear history</p>
+                      </a>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#compose">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <p>Add people</p>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <p>Information</p>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        <p>Delete group</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat__middle">
+              <ul>
+                <li class="chat__middle-item chat__middle-item_first">
+                  <img src="img/avatar.jpg" alt="" class="img1">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div>
+                    <span class="chat__middle-time">
+                      08:56am
+                    </span>
+                  </div>
+                </li>
+                <li class="chat__middle-item chat__middle-item_second">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply.
+                    </div>
+                    <span class="chat__middle-time">
+                      09:43am
+                    </span>
+                  </div>
+                </li>
+                <li class="chat__middle-item chat__middle-item_third">
+                  <img src="img/avatar3.jpg" alt="" class="img3">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply
+                      dummy text of the printing and typesetting industry.
+                    </div>
+                    <span class="chat__middle-time">
+                      11:33am
+                    </span>
+                  </div>
+                </li>
+                <li class="chat__middle-item chat__middle-item_first">
+                  <img src="img/avatar.jpg" alt="" class="img1">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message">
+                      The app allows you to select which streaming services you’re a part of, then pick a genre or two
+                      of TV shows or movies that you might be into.
+                    </div>
+                    <span class="chat__middle-time">
+                      13:33pm
+                    </span>
+                  </div>
+                </li>
+                <li class="chat__middle-item chat__middle-item_second">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply
+                      dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the
+                      printing and typesetting industry.Lorem Ipsum is simply
+                      dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the...
+                    </div>
+                    <span class="chat__middle-time">
+                      17:23pm
+                    </span>
+                  </div>
+                </li>
+                <li class="chat__middle-item chat__middle-item_third">
+                  <img src="img/avatar3.jpg" alt="" class="img3">
+                  <div class="chat__middle-content">
+                    <div class="chat__middle-message">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply
+                      dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the
+                      printing and typesetting industry.Lorem Ipsum is simply
+                      dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the...
+                    </div>
+                    <span class="chat__middle-time">
+                      19:23pm
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="chat__bottom">
+              <form>
+                <textarea class="chat__bottom-input" placeholder="Type message..." rows="1"></textarea>
+                <button type="submit" class="chat__bottom-btn">
+                  <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of Chat Room for Groups -->
+    </div>
+  </div>
+  <!-- End of Chat -->
+  <!-- Start of Modal Call -->
+  <div class="modal" id="call" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="heading">
+            <div class="heading__title">
+              Steave Ride
+            </div>
+            <div class="heading__number">
+              call to +48 888 345 903
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content">
+            <div class="img"></div>
+          </div>
+          <div class="connecting">
+            connecting
+          </div>
+          <div class="options">
+            <button class="options_btn">
+              <i class="fa fa-volume-up" aria-hidden="true"></i>
+            </button>
+            <button class="options_btn">
+              <i class="fa fa-video-camera" aria-hidden="true"></i>
+            </button>
+            <button class="options_btn">
+              <i class="fa fa-microphone-slash" aria-hidden="true"></i>
+            </button>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="close__btn">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal Call -->
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
